@@ -6,75 +6,64 @@
    {
     let nome1 = document.querySelector("#nome1").value
     let nome2 = document.querySelector("#nome2").value
-    
-    let CPF = document.querySelector("#cpf")
-    let RG = document.querySelector("#rg")
-    let cpf = Number(CPF.VALUE)
-    let rg = Number(RG.VALUE)
-
-    
-    let cidade = document.querySelector("#cidade").value
     let endereco = document.querySelector("#endereco").value
-
+    let cidade = document.querySelector("#cidade").value
     let estado = document.querySelector("#estado").value
-    
-    let CEP = document.getElementById("cep")
-    let cep = Number(CEP.VALUE)
-
-    
-
     let sexo = document.querySelector("#sexo").value
     let estadocivil = document.querySelector("#estadocivil").value
-    
     let email = document.querySelector("#email").value
-    
-    let telefone = document.getElementById("telefone")
-    let celular = document.getElementById("celular")
-  
-    let TELEFONE = Number(telefone.VALUE)
-    let CELULAR = Number(celular.VALUE)
 
-
-    if(!(nome1.length > " " && nome2.length > " "))
-    {
-        alert ("PREENCHA OS CAMPOS")
-    }
-        
-    else if(cpf < 0 && rg < 0 )
-         {
-            alert("PRENCHA OS CAMPOS")
-        }
-      
-     else if(!(cidade.length > " " && endereco.length > " "))
-         {
-            alert ("PREENCHA OS CAMPOS")
-        }
+    let cpf = document.querySelector("#cpf")
+    let rg = document.querySelector("#rg")
+    let cep = document.querySelector("#cep")
+    let telefone = document.querySelector("#telefone")
+    let celular = document.querySelector("#celular")
  
-     else if(!(estado.length > " " ))
-    {
-        alert ("PREENCHA OS CAMPOS")
-    }
+    let CPF = Number(cpf.value)
+    let RG = Number(rg.value)
+    let CEP = Number(cep.value)
+    let TELEFONE = Number(telefone.value)
+    let CELULAR = Number(celular.value)
 
-    else if(cep < 0)
+    if(!(nome1 > " " && nome2 > " "))
     {
-        alert("PREENCHA OS DADOS")
+        alert("PREENCHA OS CAMPOS")
     }
     
-    else if(!(sexo.length > " " && estadocivil.length > " " && email.length > " "))
+    else if(!(endereco > " " && cidade > " "))
     {
-       alert ("PREENCHA OS CAMPOS")
-   }
+        alert("PREENCHA OS CAMPOS")
+    }
 
+    else if(!(estado > " " && sexo > " "))
+    {
+        alert("PREENCHA OS CAMPOS")
+    }
 
-   else if(!(TELEFONE.length > " " && CELULAR.length > " "))
-   {
-      alert ("PREENCHA OS CAMPOS")
-  }
+    else if(!(estadocivil> " " && email > " "))
+    {
+        alert("PREENCHA OS CAMPOS")
+    }
 
-    else{
-            alert("CADASTRO REALIZADO COM SUCESSO")
-        }
+    else if(CPF == " " || RG == " ")
+    {
+        alert("PREENCHA OS CAMPOS")
+    }
 
+    else if(CEP == " " || TELEFONE == " ")
+    {
+        alert("PREENCHA OS CAMPOS")
+    }
+
+    else if(CELULAR == " " )
+    {
+        alert("PREENCHA OS CAMPOS")
+    }
+
+    else
+    {
+        alert("CADASTRO REALIZADO COM SUCESSO")
+    }
 }
    
 
